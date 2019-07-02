@@ -8,11 +8,13 @@
     <script src="{{ url_for('static', filename='js/game.js') }}" defer></script>
 </head>
 <body>
-    <div id="right">
-        <button id="button1">right</button>
+    <div id="board">
+    {% for row in range(row_num) %}
+        {% for col in range(col_num) %}
+            <div class="cell">k</div>
+        {% endfor %}
+    {% endfor %}
     </div>
-    <div id="left">
-        <button id="button2">left</button>
-    </div>
+
 </body>
 </html>
