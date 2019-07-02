@@ -1,20 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Puzzle</title>
+{% extends 'layout.html' %}
+
+{% block head %}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dragula/3.7.2/dragula.min.css" />
     <script src='https://cdnjs.cloudflare.com/ajax/libs/dragula/3.7.2/dragula.min.js' defer></script>
     <script src="{{ url_for('static', filename='js/game.js') }}" defer></script>
-</head>
-<body>
-    <div id="board">
+{% endblock %}
+
+{% block content %}
+    <div id="container" data-row-num="{{ row_num }}" data-col-num="{{ col_num }}">
     {% for row in range(row_num) %}
-        {% for col in range(col_num) %}
-            <div class="cell">k</div>
-        {% endfor %}
+        <div class="row">
+            {% for col in range(col_num) %}
+                <div class="cel">k</div>
+            {% endfor %}
+        </div>
     {% endfor %}
     </div>
-
-</body>
-</html>
+{% endblock %}
