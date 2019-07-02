@@ -2,6 +2,8 @@
 
 {% block head %}
     <script src="{{ url_for('static', filename='js/game.js') }}" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dragula/3.7.2/dragula.min.css" />
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/dragula/3.7.2/dragula.min.js' defer></script>
 {% endblock %}
 
 {% block content %}
@@ -18,4 +20,7 @@
         {% endfor %}
     </div>
 
+    <div class="container">
+    <img id="ball" src="{{ url_for('static', filename='images/BasketBall.png') }}">
+    </div>
 {% endblock %}
