@@ -8,7 +8,6 @@ def index():
     return render_template("index.html")
 """
 
-
 @app.route('/')
 def game():
     image_list = [
