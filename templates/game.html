@@ -1,7 +1,5 @@
 {% extends 'layout.html' %}
 
-
-
 {% block head %}
     <script src='https://cdnjs.cloudflare.com/ajax/libs/dragula/3.7.2/dragula.min.js' defer></script>
     <script src="{{ url_for('static', filename='js/game.js') }}" defer></script>
@@ -9,8 +7,6 @@
 {% endblock %}
 
 {% block content %}
-
-    <div id="game-board" class="card" data-row-num="{{ row_num }}" data-col-num="{{ col_num }}" data-win-size="{{ win_size }}">
         {% for row in range(row_num) %}
             <div>
                 {% for col in range(col_num) %}
@@ -20,11 +16,9 @@
                 {% endfor %}
             </div>
         {% endfor %}
-    </div>
-
     <br><br>
-
     <div id="bar" class="card" data-length="{{ row_num * col_num }}">
+    <br><br>
         {% for item in image_list %}
             <div class="option-cell">
                 <div class="image-cell">
@@ -33,8 +27,5 @@
             </div>
         {% endfor %}
     </div>
-
-
-
 {% endblock %}
 
