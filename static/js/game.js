@@ -1,6 +1,7 @@
-dragula([document.getElementById('ball')]);
 
-dragula([document.getElementsByClassName('game-cell')]);
-let containersArray = Array.from(htmlCollection);
-dragula(containersArray);
+
+
+const dragableElements = document.querySelectorAll('.dragable');
+const dragableArray = Array.from(dragableElements);
+dragula(dragableArray);
 

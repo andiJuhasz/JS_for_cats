@@ -2,26 +2,41 @@
 
 {% block head %}
     <script src="{{ url_for('static', filename='js/game.js') }}" defer></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dragula/3.7.2/dragula.min.css" />
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/dragula/3.7.2/dragula.min.js' defer></script>
 {% endblock %}
 
 {% block content %}
 
-      <div id="game-board" class="mb-3" data-row-num="{{ row_num }}" data-col-num="{{ col_num }}" data-win-size="{{ win_size }}">
-        {% for row in range(row_num) %}
-            <div>
-                {% for col in range(col_num) %}
-                    <div class="game-cell"
-                         data-coordinate-x="{{ col }}"
-                         data-coordinate-y="{{ row }}"></div>
-                {% endfor %}
-            </div>
-        {% endfor %}
+
+<div class="container">
+  <h1>Drag & Drop</h1>
+
+
+    <div class="dragable" id="drag-elements">
+        <img id="ball" src="{{ url_for('static', filename='images/BasketBall.png') }}">
+        <div>Element 1</div>
+        <div>Element 2</div>
+        <div>Element 3</div>
     </div>
 
-    <div class="container">
-    <img id="ball" src="{{ url_for('static', filename='images/BasketBall.png') }}">
+    <div class="dragable" id="drop-target">
+        <img id="hoop" src="{{ url_for('static', filename='images/hoop.png') }}">
+
     </div>
+
+</div>
+
 {% endblock %}
 
+
+{#            <div id="game-board" class="mb-3" data-row-num="{{ row_num }}" data-col-num="{{ col_num }}" data-win-size="{{ win_size }}">#}
+{#                {% for row in range(row_num) %}#}
+{#                    <div>#}
+{#                        {% for col in range(col_num) %}#}
+{#                            <div class="game-cell"#}
+{#                                 data-coordinate-x="{{ col }}"#}
+{#                                 data-coordinate-y="{{ row }}">#}
+{#                            </div>#}
+{#                        {% endfor %}#}
+{#                    </div>#}
+{#                {% endfor %}#}
+{#            </div>#}
