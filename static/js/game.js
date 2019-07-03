@@ -1,7 +1,2 @@
-
-
-
-const dragableElements = document.querySelectorAll('.dragable');
-const dragableArray = Array.from(dragableElements);
-dragula(dragableArray);
-
+const barCells = Array.from(document.querySelectorAll('.game-cell', '.option-cell', 'image-cell'));
+dragula(barCells);
