@@ -19,7 +19,7 @@ body {
 }
 
 
-#ball {
-    width: 5%;
-    height: 5%;
+.image {
+    width: 50%;
+    height: 50%;
 }
