@@ -5,8 +5,7 @@
 {% endblock %}
 
 {% block content %}
-
-      <div id="game-board" class="mb-3" data-row-num="{{ row_num }}" data-col-num="{{ col_num }}" data-win-size="{{ win_size }}">
+    <div id="game-board" class="card" data-row-num="{{ row_num }}" data-col-num="{{ col_num }}" data-win-size="{{ win_size }}">
         {% for row in range(row_num) %}
             <div>
                 {% for col in range(col_num) %}
@@ -15,6 +14,12 @@
                          data-coordinate-y="{{ row }}"></div>
                 {% endfor %}
             </div>
+        {% endfor %}
+    </div>
+    <br><br>
+    <div id="bar" class="card" data-length="{{ row_num * col_num }}">
+        {% for item in range(row_num * col_num) %}
+            <div class="option-cell"></div>
         {% endfor %}
     </div>
 

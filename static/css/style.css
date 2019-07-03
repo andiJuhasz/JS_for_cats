@@ -5,12 +5,12 @@ body {
     color: black;
 }
 
-.game-cell {
+.game-cell, .option-cell {
     cursor: pointer;
     border: 1px solid black;
     display: inline-block;
-    width: 50px;
-    height: 50px;
+    width: 100px;
+    height: 100px;
     font-size: 35px;
     text-align: center;
     margin: 3px;
@@ -18,7 +18,4 @@ body {
     vertical-align: middle;
 }
 
-navbar {
-    background-color: transparent;
-}
 
