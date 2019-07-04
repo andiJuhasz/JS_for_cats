@@ -12,18 +12,17 @@ function check() {
         '<img class="image" src="/static/images/van/Capture6.JPG">',
         '<img class="image" src="/static/images/van/Capture7.JPG">',
         '<img class="image" src="/static/images/van/Capture8.JPG">',
-        '<img class="image gu-transit" src="/static/images/van/Capture9.JPG">',
-
+        '<img class="image" src="/static/images/van/Capture9.JPG">',
     ];
 
     let checkCount = 0;
-    for (let i = 0; i < check_list.length; i++) {
+    for (let i = 0; i <= check_list.length; i++) {
         if (check_list[i] === imageSequence[i]) {
             checkCount++
         }
-    }
-    if (checkCount === check_list.length) {
-        alert('Szia Andi:)')
+        if (checkCount === check_list.length) {
+            alert('Szia Andi:)')
+        }
     }
 }
 
