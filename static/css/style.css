@@ -38,6 +38,10 @@
     height: 50px;
 }
 
+#puzzle {
+    display: run-in;
+}
+
 body {
     background-image: url("../images/31757.png");
 }
