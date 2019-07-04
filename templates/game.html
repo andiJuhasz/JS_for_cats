@@ -7,6 +7,7 @@
 {% endblock %}
 
 {% block content %}
+    <div id="game-board">
         {% for row in range(row_num) %}
             <div>
                 {% for col in range(col_num) %}
@@ -16,6 +17,7 @@
                 {% endfor %}
             </div>
         {% endfor %}
+    </div>
     <br><br>
     <div id="bar" class="card" data-length="{{ row_num * col_num }}">
     <br><br>
