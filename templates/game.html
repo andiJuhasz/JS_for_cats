@@ -7,23 +7,21 @@
 {% endblock %}
 
 {% block content %}
+    <div id="game-board">
         {% for row in range(row_num) %}
             <div>
                 {% for col in range(col_num) %}
-                    <div class="game-cell">
-                        <div class="image-cell"></div>
-                    </div>
+                    <div class="game-cell"></div>
                 {% endfor %}
             </div>
         {% endfor %}
+    </div>
     <br><br>
     <div id="bar" class="card" data-length="{{ row_num * col_num }}">
     <br><br>
         {% for item in image_list %}
             <div class="option-cell">
-                <div class="image-cell">
                     <img class="image" src="/{{ item }}">
-                </div>
             </div>
         {% endfor %}
     </div>
