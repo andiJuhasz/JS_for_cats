@@ -13,10 +13,11 @@
     cursor: pointer;
     border: 0.1px solid black;
     display: inline-block;
+    margin-right: -2.7px;
+    margin-left: -2.8px;
     width: 180px;
     height: 180px;
     text-align: center;
-    margin: 0px;
     vertical-align: middle;
     line-height: 0px;
 }
@@ -50,5 +51,12 @@
 
 body {
     background-image: url("../images/31757.png");
+}
+
+a {
+    text-decoration: none;
+    font-family: Chilanka;
+    font-size: xx-large;
+    color: darkblue;
 }
 
