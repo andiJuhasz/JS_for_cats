@@ -2,15 +2,15 @@ from flask import Flask, render_template
 
 app = Flask(__name__)
 
-"""
+
 @app.route('/')
 def index():
     return render_template("index.html")
-"""
 
-@app.route('/')
+
+@app.route('/game')
 def game():
-    image_list = [
+    image_list = {
         'static/images/van/Capture1.JPG',
         'static/images/van/Capture2.JPG',
         'static/images/van/Capture3.JPG',
@@ -20,7 +20,7 @@ def game():
         'static/images/van/Capture7.JPG',
         'static/images/van/Capture8.JPG',
         'static/images/van/Capture9.JPG'
-    ]
+    }
     return render_template("game.html", row_num=3, col_num=3, image_list=image_list)
 
 
