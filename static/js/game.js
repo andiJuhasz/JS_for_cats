@@ -1,3 +1,4 @@
+/*
 function shuffle(array) {
   var currentIndex = array.length, temporaryValue, randomIndex;
 
@@ -26,6 +27,7 @@ function randomizer() {
         counter++;
     }
 }
+*/
 
 
 function check(event) {
