@@ -9,19 +9,21 @@
 {% endblock %}
 
 {% block content %}
-    
-    <h1>Welcome to Puzzle!</h1>
-    <br><img id="puzzle" src="/static/images/puzzle.png" width="150" height="150">
+    <div class="container" align="center">
 
-    <h1>Let's start the game</h1>
-    
-    <h2>Choose a picture!</h2>
+        <h1>Welcome to Puzzle!</h1>
+        <br><img id="puzzle" src="/static/images/puzzle.png" width="150" height="150">
 
-    <a href="/game?name=van">
-    <img name="van" src="/static/images/van/van.JPG" height="250" width="250" border="3px"></a>
+        <h1>Let's start the game</h1>
 
-    <a href="/game?name=motor">
-    <img name="motor" src="/static/images/motor/motor.JPG" height="250" width="250" border="3px"></a>
+        <h2>Choose a picture!</h2>
 
+        <a href="/game?name=van">
+        <img name="van" src="/static/images/van/van.JPG" height="250" width="250" border="3px"></a>
+
+        <a href="/game?name=motor">
+        <img name="motor" src="/static/images/motor/motor.JPG" height="250" width="250" border="3px"></a>
+
+    </div>
 
 {% endblock %}
