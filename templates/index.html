@@ -1,20 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>P U Z Z L E</title>
-</head>
-<body>
+{% extends 'layout.html' %}
+
+{% block head %}
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/dragula/3.7.2/dragula.min.js' defer></script>
+    <script src="{{ url_for('static', filename='js/game.js') }}" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dragula/3.7.2/dragula.min.css" />
+
+{% endblock %}
+
+{% block content %}
     
     <h1>Welcome to Puzzle!</h1>
+    <br><img id="puzzle" src="/static/images/puzzle.png" width="150" height="150">
+
     <h1>Let's start the game</h1>
     
     <h2>Choose a picture!</h2>
-    
-    <a href="/game">
-    <img src="/static/images/van/van.JPG" height="250" width="250" border="3px"></a>
+
+    <a href="/game?name=van">
+    <img name="van" src="/static/images/van/van.JPG" height="250" width="250" border="3px"></a>
+
+    <a href="/game?name=motor">
+    <img name="motor" src="/static/images/motor/motor.JPG" height="250" width="250" border="3px"></a>
 
 
-
-</body>
-</html>
+{% endblock %}

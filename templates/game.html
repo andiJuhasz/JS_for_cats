@@ -8,7 +8,8 @@
 
 {% block content %}
     <h1 id="header">Have fun!</h1><br>
-    <div id="game-board">
+    <p><h2 id="win"></h2></p>
+    <div id="game-board" data-image-name="{{ image_name }}">
         {% for row in range(row_num) %}
             <div>
                 {% for col in range(col_num) %}
@@ -20,7 +21,7 @@
     <br><br>
     <div id="bar" class="card" data-length="{{ row_num * col_num }}">
     <br><br>
-        {% for item in image_list %}
+        {% for item in image_set %}
             <div class="option-cell">
                     <img class="image" src="/{{ item }}">
             </div>
