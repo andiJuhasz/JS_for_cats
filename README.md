@@ -1,1 +1,1 @@
-# JS_for_cats
+# This is a drag and drop puzzle game.
